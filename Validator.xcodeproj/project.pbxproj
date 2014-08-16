@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		979F56C1199F4402008513FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 979F56C0199F4402008513FC /* main.m */; };
+		979F56C9199F4416008513FC /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 979F56C8199F4416008513FC /* Validator.m */; };
+		979F56CB199F4577008513FC /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 979F56CA199F4577008513FC /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,9 @@
 /* Begin PBXFileReference section */
 		979F56BD199F4402008513FC /* Validator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Validator; sourceTree = BUILT_PRODUCTS_DIR; };
 		979F56C0199F4402008513FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		979F56C7199F4416008513FC /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
+		979F56C8199F4416008513FC /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
+		979F56CA199F4577008513FC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +46,7 @@
 		979F56B4199F4402008513FC = {
 			isa = PBXGroup;
 			children = (
+				979F56CA199F4577008513FC /* README.md */,
 				979F56BF199F4402008513FC /* Validator */,
 				979F56BE199F4402008513FC /* Products */,
 			);
@@ -58,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				979F56C0199F4402008513FC /* main.m */,
+				979F56C7199F4416008513FC /* Validator.h */,
+				979F56C8199F4416008513FC /* Validator.m */,
 			);
 			path = Validator;
 			sourceTree = "<group>";
@@ -118,6 +126,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				979F56CB199F4577008513FC /* README.md in Sources */,
+				979F56C9199F4416008513FC /* Validator.m in Sources */,
 				979F56C1199F4402008513FC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
