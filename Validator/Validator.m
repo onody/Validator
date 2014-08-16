@@ -123,4 +123,45 @@
     
 }
 
+/**
+ * 長さチェック（最小値以上）
+ *
+ *
+ * @param NSString 文字列
+ * @param NSInteger 最小文字数
+ * @return BOOL
+ */
+- (BOOL)chkMinLen:(NSString*) words :(NSInteger)minNum{
+    
+    NSInteger byteLength = [words length];
+    
+    if( byteLength > minNum){
+        return YES;
+    }else{
+        return NO;
+    }
+
+    
+}
+
+/**
+ * 長さチェック（最大値以下）
+ *
+ *
+ * @param NSString 文字列
+ * @param NSInteger 最大文字数
+ * @return BOOL
+ */
+- (BOOL)chkMaxLen:(NSString*) words :(NSInteger)maxNum{
+    
+    NSInteger byteLength = [words length];
+    
+    if( byteLength <= maxNum){
+        return YES;
+    }else{
+        return NO;
+    }
+    
+}
+
 @end

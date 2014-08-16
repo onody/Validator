@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
                                 ];
         
         // チェック用文字列
-        NSString *str = @".dot_kara_hazimあaru@example.com";
+        NSString *str = @"01234567890";
         
         // 必須チェック
         if(![chk chkEmpty:str]){
@@ -56,8 +56,24 @@ int main(int argc, const char * argv[]) {
          */
         
         // Emailチェック
+        /*
         if (![chk chkEmail:str]) {
             NSLog(@"%@", [errMsg objectForKey:@"errEmail"]);
+            return 0;
+        }
+        */
+        
+        // 規定文字数以上かチェック
+        /*
+        if (![chk chkMinLen:str :(NSInteger)50]){
+            NSLog(@"50文字以上で入力してください。");
+            return 0;
+        }
+         */
+        
+        // 規定文字数以下かチェック
+        if (![chk chkMaxLen:str :(NSInteger)10]){
+            NSLog(@"10文字以下で入力してください。");
             return 0;
         }
         

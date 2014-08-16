@@ -15,5 +15,7 @@
 - (BOOL)chkZenkaku:(NSString*)words;
 - (BOOL)chkZipcode:(NSString*)words;
 - (BOOL)chkEmail:(NSString*)words;
+- (BOOL)chkMinLen:(NSString*)words :(NSInteger)minNum;
+- (BOOL)chkMaxLen:(NSString*)words :(NSInteger)maxNum;
 
 @end
