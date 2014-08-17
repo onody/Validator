@@ -31,20 +31,13 @@
 /**
  * 半角英数チェック
  *
- * 記号は無視。半角のローマ字と、数字のみ。
+ * 半角のasciiに変換できるか、で判定。
  * @param NSString 文字列
  * @return BOOL
  */
 - (BOOL)chkAlnum:(NSString*)words{
     
-    NSError *err = nil;
-    NSRegularExpression *regex = nil;
-    
-    regex = [NSRegularExpression regularExpressionWithPattern:@"^[a-zA-Z0-9]+$" options:NSRegularExpressionCaseInsensitive error:&err];
-    
-    NSTextCheckingResult *match = [regex firstMatchInString:words options:0 range:NSMakeRange(0, words.length)];
-    
-    if(!match){
+    if(![words canBeConvertedToEncoding:NSASCIIStringEncoding]){
         return NO;
     }else{
         return YES;
@@ -59,14 +52,15 @@
  * @return BOOL
  */
 - (BOOL)chkZenkaku:(NSString *)words{
-    
+
+
     NSError *err = nil;
     NSRegularExpression *regex = nil;
     
     regex = [NSRegularExpression regularExpressionWithPattern:@"^[^\x01-\x7E]+$" options:NSRegularExpressionCaseInsensitive error:&err];
     
     NSTextCheckingResult *match = [regex firstMatchInString:words options:0 range:NSMakeRange(0, words.length)];
-    
+     
     if(!match){
         return NO;
     }else{
@@ -112,7 +106,7 @@
     NSError *err = nil;
     NSRegularExpression *regex = nil;
     
-    regex = [NSRegularExpression regularExpressionWithPattern:@"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" options:NSRegularExpressionCaseInsensitive error:&err];
+    regex = [NSRegularExpression regularExpressionWithPattern:@"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$" options:NSRegularExpressionCaseInsensitive error:&err];
     NSTextCheckingResult *match = [regex firstMatchInString:words options:0 range:NSMakeRange(0, words.length)];
     
     if(!match){
